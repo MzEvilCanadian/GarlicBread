@@ -34,8 +34,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
-            Mod.Cook,
-            Mod.Chop
+            Mod.Cook
         };
 
         public override List<ItemGroup.ItemProcess> Processes => new List<Item.ItemProcess>
