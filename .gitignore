@@ -32,3 +32,5 @@
 *.app
 .vs/ProjectSettings.json
 .vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/GarlicBread/v16/.suo
