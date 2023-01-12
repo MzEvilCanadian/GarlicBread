@@ -16,7 +16,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         {
             new Dish.MenuItem
             {
-                Item = Mod.PlatedGarlicBread
+                Item = Mod.CookedGarlicBread
             }
         };
         public override HashSet<Dish.IngredientUnlock> IngredientsUnlocks => new HashSet<Dish.IngredientUnlock>
@@ -29,13 +29,31 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
-            Mod.BreadSlice,
-            Mod.CheeseGrated,
+            Mod.Flour,
+            Mod.Cheese,
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
             Mod.Cook,
             Mod.Chop
         };
+
+        public override List<ItemGroup.ItemProcess> Processes => new List<Item.ItemProcess>
+        {
+            new Item.ItemProcess
+            {
+                Duration = 2,
+                Process = Mod.Cook,
+                Result = Mod.CookedGarlicBread
+            }
+        };
+
+        public override void OnRegister(GameDataObject gdo)
+        {
+            gdo.name = "Dish - Garlic Bread";
+
+           // MaterialUtils.ApplyMaterial<MeshRenderer>(Prefab, "Spaghetti/Spaghetti.001", new Material[] {
+           //     MaterialUtils.GetExistingMaterial("Bread - Bun")});
+        }
     }
 }
