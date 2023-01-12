@@ -1,58 +1,48 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace GarlicBread.Customs.GarlicBreadProcess
 {
-    public class GarlicBread : CustomDish
+    internal class CookedGarlicBread : CustomItemGroup
     {
-        public override string UniqueNameID => "Garlic Bread -- Base";
-        public override DishType Type => DishType.Base;
-        public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
-        public override CardType CardType => CardType.Default;
-        public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
-        public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
-        public override List<Dish.MenuItem> ResultingMenuItems => new List<Dish.MenuItem>
-        {
-            new Dish.MenuItem
-            {
-                Item = Mod.CookedGarlicBread
-            }
-        };
-        public override HashSet<Dish.IngredientUnlock> IngredientsUnlocks => new HashSet<Dish.IngredientUnlock>
-        {
-            new Dish.IngredientUnlock
-            {
-                Ingredient = Mod.PlatedGarlicBread,
-                MenuItem = Mod.PlatedGarlicBread
-            }
-        };
-        public override HashSet<Item> MinimumIngredients => new HashSet<Item>
-        {
-            Mod.Flour,
-            Mod.Cheese,
-        };
-        public override HashSet<Process> RequiredProcesses => new HashSet<Process>
-        {
-            Mod.Cook
-        };
+        public override string UniqueNameID => "Garlic Bread";
+        public override GameObject Prefab => Mod.Tomato.Prefab;          // Filler line until graphics are made
+        public override ItemCategory ItemCategory => ItemCategory.Generic;
+        public override ItemStorage ItemStorageFlags => ItemStorageFlags.None;
 
+        public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
+        {
+            new ItemGroup.ItemSet()
+            {
+                Max = 1,
+                Min = 1,
+                Items = new List<Items>()
+                {
+                    Mod.BreadSliced,
+                    Mod.CheeseGrated
+                }
+            }
+        };
         public override List<ItemGroup.ItemProcess> Processes => new List<Item.ItemProcess>
         {
             new Item.ItemProcess
             {
-                Duration = 2,
+                Duration = 1.5,
                 Process = Mod.Cook,
                 Result = Mod.CookedGarlicBread
             }
         };
+        
+        /* Below is to add in the custom graphic for the item
 
-        public override void OnRegister(GameDataObject gdo)
+        public override void OnRegister(GameDataObject gdo) 
         {
             gdo.name = "Dish - Garlic Bread";
 
-           // MaterialUtils.ApplyMaterial<MeshRenderer>(Prefab, "Spaghetti/Spaghetti.001", new Material[] {
-           //     MaterialUtils.GetExistingMaterial("Bread - Bun")});
-        }
+                 MaterialUtils.ApplyMaterial<MeshRenderer>(Prefab, "Spaghetti/Spaghetti.001", new Material[] {
+                 MaterialUtils.GetExistingMaterial("Bread - Bun")});
+        } */
     }
 }

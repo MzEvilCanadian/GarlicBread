@@ -11,21 +11,21 @@ using KitchenMods;
 using ItemReference = KitchenLib.References.ItemReferences;
 using System.Linq;
 
-
-
 namespace GarlicBread
 {
     public class Mod : BaseMod
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "0.0.2";
+        internal const string MOD_VERSION = "0.0.3";
         internal const string MOD_AUTHOR = "Amber Booth";
         internal const string PLATEUP_VERSION = "1.1.2";
 
         internal static Item BreadSlice => getexsistingGDO<Item>(ItemReference.BreadSlice);
         internal static Item CheeseGrated => getexsistingGDO<Item>(ItemReference.CheeseGrated);
         internal static Item BurntBread => GetExistingGDO<Item>(ItemReferences.BurntBread);
+        internal static Item Tomato => GetExistingGDO<Item>(ItemReference.Tomato);
+        internal static Item Pumpkin => GetExistingGDO<Item>(ItemReference.Pumpkin);
 
         internal static Process Cook => GetExsiistingGDO<Process>(ProcessReferences.Cook);
 
@@ -33,7 +33,7 @@ namespace GarlicBread
         internal static Item CheeseGrated => GetModdedGDO<Item, CheeseGrated>();
         internal static Item BurntGarlicBread => GetModdedGDO<Item, BurntGarlicBread>();
 
-        internal static Dish CookedGarlicBread => GetModdedGDO<Dish, CookedGarlicBread>();
+        internal static Dish GarlicBreadDish => GetModdedGDO<Dish, GarlicBreadDish>();
 
         internal static AssetBundle bundle;
         internal static bool debug = true;
@@ -64,6 +64,7 @@ namespace GarlicBread
             AddGameDataObject<GarlicBread>();
             AddGameDataObject<BurntGarlicBread>();
             AddGameDataObject<CookedGarlicBread>();
+            AddGameDataObject<GarlicBreadDish>();
         }
 
         protected override void OnUpdate() { }
