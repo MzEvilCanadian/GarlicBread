@@ -1,10 +1,11 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace GarlicBread.Customs.GarlicBreadProcess
 {
-    public class GarlicBread : CustomDish
+    public class GarlicBreadDish : CustomDish
     {
         public override string UniqueNameID => "Garlic Bread -- Base";
         public override DishType Type => DishType.Base;
@@ -24,13 +25,13 @@ namespace GarlicBread.Customs.GarlicBreadProcess
             new Dish.IngredientUnlock
             {
                 Ingredient = Mod.GarlicBread,
-                MenuItem = Mod.PlatedGarlicBread
+                MenuItem = Mod.CookedGarlicBread
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
             Mod.Flour,
-            Mod.Cheese,
+            Mod.Cheese
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {

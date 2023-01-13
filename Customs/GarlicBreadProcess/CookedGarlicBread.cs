@@ -10,7 +10,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         public override string UniqueNameID => "Cooked Garlic Bread";
         public override GameObject Prefab => Mod.Pumpkin.Prefab;          // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
-        public override ItemStorage ItemStorageFlags => ItemStorageFlags.None;
+        public override ItemStorage ItemStorageFlags => ItemStorage.None;
 
         public override List<ItemGroup.ItemProcess> Processes => new List<Item.ItemProcess>
         {
@@ -21,7 +21,6 @@ namespace GarlicBread.Customs.GarlicBreadProcess
                 Result = Mod.BurntGarlicBread
             }
         };
-
         /* Below is to add in the custom graphic for the item
         public override void OnRegister(GameDataObject gameDataObject) 
         {

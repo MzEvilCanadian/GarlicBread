@@ -21,36 +21,32 @@ namespace GarlicBread
         internal const string MOD_AUTHOR = "Amber Booth";
         internal const string PLATEUP_VERSION = "1.1.2";
 
-        internal static Item BreadSlice => getexsistingGDO<Item>(ItemReference.BreadSlice);
-        internal static Item CheeseGrated => getexsistingGDO<Item>(ItemReference.CheeseGrated);
-        internal static Item BurntBread => GetExistingGDO<Item>(ItemReferences.BurntBread);
         internal static Item Tomato => GetExistingGDO<Item>(ItemReference.Tomato);
         internal static Item Pumpkin => GetExistingGDO<Item>(ItemReference.Pumpkin);
+        internal static Item Flour => GetExistingGDO<Item>(ItemReference.Flour);
+        internal static Item Cheese => GetExistingGDO<Item>(ItemReference.Cheese);
+        internal static Item BurntBread => GetExistingGDO<Item>(ItemReferences.BurnedBread);
 
-        internal static Process Cook => GetExsiistingGDO<Process>(ProcessReferences.Cook);
+        internal static Process Cook => GetExistingGDO<Process>(ProcessReferences.Cook);
 
-        internal static Item BreadSlice => GetModdedGDO<Item, CheeseGrated>();
-        internal static Item CheeseGrated => GetModdedGDO<Item, CheeseGrated>();
+        internal static Item BreadSlice => GetExistingGDO<Item>(ItemReference.BreadSlice);
+        internal static Item CheeseGrated => GetExistingGDO<Item>(ItemReference.CheeseGrated);
+
         internal static Item BurntGarlicBread => GetModdedGDO<Item, BurntGarlicBread>();
-
+        internal static Item GarlicBread => GetModdedGDO<Item, UncookedGarlicBread>();
+        internal static ItemGroup CookedGarlicBread => GetModdedGDO<ItemGroup, CookedGarlicBread>();
         internal static Dish GarlicBreadDish => GetModdedGDO<Dish, GarlicBreadDish>();
 
         internal static AssetBundle bundle;
         internal static bool debug = true;
 
-        protected override void OnPostActivate(KitchenMods.Mod mod)
+       /* protected override void OnPostActivate(KitchenMods.Mod mod)
         {
             bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
-        }
+        } */
 
         public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{PLATEUP_VERSION}", Assembly.GetExecutingAssembly())
         {
-            string codeBase = Assembly.GetExecutingAssembly().CodeBase;
-            UriBuilder uri = new UriBuilder(codeBase);
-            string commons = Uri.UnescapeDataString(uri.Path);
-            string steamapps = Directory.GetParent(commons).FullName;
-            string workshop = Path.Combine(steamapps, "workshop");
-            string content = Path.Combine(workshop, "content");
             string bundlePath = Path.Combine(new string[] { Directory.GetParent(Application.dataPath).FullName, "Mods", ModID });
 
             Debug.Log($"{MOD_NAME} {MOD_VERSION} {MOD_AUTHOR}: Loaded");
@@ -59,9 +55,9 @@ namespace GarlicBread
 
         protected override void Initialise()
         {
-            base.Initalise();
+            base.Initialise();
 
-            AddGameDataObject<GarlicBread>();
+            AddGameDataObject<UncookedGarlicBread>();
             AddGameDataObject<BurntGarlicBread>();
             AddGameDataObject<CookedGarlicBread>();
             AddGameDataObject<GarlicBreadDish>();

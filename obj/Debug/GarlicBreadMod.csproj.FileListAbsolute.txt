@@ -1,0 +1,7 @@
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\GarlicBreadMod.csproj.CoreCompileInputs.cache
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\GarlicBreadMod.csproj.AssemblyReference.cache
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\bin\Debug\GarlicBreadMod.dll.config
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\bin\Debug\GarlicBreadMod.dll
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\bin\Debug\GarlicBreadMod.pdb
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\GarlicBreadMod.dll
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\GarlicBreadMod.pdb

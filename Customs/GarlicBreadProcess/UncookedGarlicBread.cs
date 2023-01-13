@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace GarlicBread.Customs.GarlicBreadProcess
 {
-    internal class CookedGarlicBread : CustomItemGroup
+    internal class UncookedGarlicBread : CustomItemGroup
     {
         public override string UniqueNameID => "Garlic Bread";
         public override GameObject Prefab => Mod.Tomato.Prefab;          // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
-        public override ItemStorage ItemStorageFlags => ItemStorageFlags.None;
+        public override ItemStorage ItemStorageFlags => ItemStorage.None;
 
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
         {
@@ -18,9 +18,9 @@ namespace GarlicBread.Customs.GarlicBreadProcess
             {
                 Max = 1,
                 Min = 1,
-                Items = new List<Items>()
+                Items = new List<Item>()
                 {
-                    Mod.BreadSliced,
+                    Mod.BreadSlice,
                     Mod.CheeseGrated
                 }
             }
@@ -29,12 +29,12 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         {
             new Item.ItemProcess
             {
-                Duration = 1.5,
+                Duration = 1,
                 Process = Mod.Cook,
                 Result = Mod.CookedGarlicBread
             }
         };
-        
+
         /* Below is to add in the custom graphic for the item
 
         public override void OnRegister(GameDataObject gdo) 
