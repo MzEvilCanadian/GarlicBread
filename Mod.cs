@@ -17,12 +17,14 @@ namespace GarlicBread
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "0.0.3";
+        internal const string MOD_VERSION = "0.1.2";
         internal const string MOD_AUTHOR = "Amber Booth";
         internal const string PLATEUP_VERSION = "1.1.2";
 
         internal static Item Tomato => GetExistingGDO<Item>(ItemReference.Tomato);
+        internal static Item Apple => GetExistingGDO<Item>(ItemReference.Apple);
         internal static Item Pumpkin => GetExistingGDO<Item>(ItemReference.Pumpkin);
+        internal static Item Plate => GetExistingGDO<Item>(ItemReference.Plate);
         internal static Item Flour => GetExistingGDO<Item>(ItemReference.Flour);
         internal static Item Cheese => GetExistingGDO<Item>(ItemReference.Cheese);
         internal static Item BurntBread => GetExistingGDO<Item>(ItemReferences.BurnedBread);
@@ -33,8 +35,9 @@ namespace GarlicBread
         internal static Item CheeseGrated => GetExistingGDO<Item>(ItemReference.CheeseGrated);
 
         internal static Item BurntGarlicBread => GetModdedGDO<Item, BurntGarlicBread>();
-        internal static Item GarlicBread => GetModdedGDO<Item, UncookedGarlicBread>();
-        internal static ItemGroup CookedGarlicBread => GetModdedGDO<ItemGroup, CookedGarlicBread>();
+        internal static ItemGroup GarlicBread => GetModdedGDO<ItemGroup, UncookedGarlicBread>();
+        internal static ItemGroup PlatedGarlicBread => GetModdedGDO<ItemGroup, PlatedGarlicBread>();
+        internal static Item CookedGarlicBread => GetModdedGDO<Item, CookedGarlicBread>();
         internal static Dish GarlicBreadDish => GetModdedGDO<Dish, GarlicBreadDish>();
 
         internal static AssetBundle bundle;

@@ -7,7 +7,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
 {
     internal class UncookedGarlicBread : CustomItemGroup
     {
-        public override string UniqueNameID => "Garlic Bread";
+        public override string UniqueNameID => "Uncooked Garlic Bread";
         public override GameObject Prefab => Mod.Tomato.Prefab;          // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
@@ -16,8 +16,8 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         {
             new ItemGroup.ItemSet()
             {
-                Max = 1,
-                Min = 1,
+                Max = 2,
+                Min = 2,
                 Items = new List<Item>()
                 {
                     Mod.BreadSlice,
@@ -29,7 +29,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         {
             new Item.ItemProcess
             {
-                Duration = 1,
+                Duration = 6,
                 Process = Mod.Cook,
                 Result = Mod.CookedGarlicBread
             }

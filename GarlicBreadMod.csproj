@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Customs\GarlicBreadProcess\BurntGarlicBread.cs" />
     <Compile Include="Customs\GarlicBreadProcess\CookedGarlicBread.cs" />
+    <Compile Include="Customs\GarlicBreadProcess\PlatedGarlicBread.cs" />
     <Compile Include="Customs\GarlicBreadProcess\UncookedGarlicBread.cs" />
     <Compile Include="Customs\GarlicBreadProcess\GarlicBreadDish.cs" />
     <Compile Include="Mod.cs" />

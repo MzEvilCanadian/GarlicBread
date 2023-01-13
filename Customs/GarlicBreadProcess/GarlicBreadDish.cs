@@ -8,7 +8,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
     public class GarlicBreadDish : CustomDish
     {
         public override string UniqueNameID => "Garlic Bread -- Base";
-        public override DishType Type => DishType.Base;
+        public override DishType Type => DishType.Starter;
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
         public override CardType CardType => CardType.Default;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
@@ -17,7 +17,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
         {
             new Dish.MenuItem
             {
-                Item = Mod.CookedGarlicBread
+                Item = Mod.PlatedGarlicBread
             }
         };
         public override HashSet<Dish.IngredientUnlock> IngredientsUnlocks => new HashSet<Dish.IngredientUnlock>
@@ -25,7 +25,7 @@ namespace GarlicBread.Customs.GarlicBreadProcess
             new Dish.IngredientUnlock
             {
                 Ingredient = Mod.GarlicBread,
-                MenuItem = Mod.CookedGarlicBread
+                MenuItem = Mod.PlatedGarlicBread   // Hard cast casts and Exception
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
