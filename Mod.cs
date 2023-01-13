@@ -17,7 +17,7 @@ namespace GarlicBread
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "0.1.3";
+        internal const string MOD_VERSION = "0.1.5";
         internal const string MOD_AUTHOR = "Amber Booth";
         internal const string PLATEUP_VERSION = "1.1.2";
 
@@ -30,12 +30,14 @@ namespace GarlicBread
         internal static Item BurntBread => GetExistingGDO<Item>(ItemReferences.BurnedBread);
 
         internal static Process Cook => GetExistingGDO<Process>(ProcessReferences.Cook);
+        internal static Process Chop => GetExistingGDO<Process>(ProcessReferences.Chop);
+        internal static Process Knead => GetExistingGDO<Process>(ProcessReferences.Knead);
 
         internal static Item BreadSlice => GetExistingGDO<Item>(ItemReference.BreadSlice);
         internal static Item CheeseGrated => GetExistingGDO<Item>(ItemReference.CheeseGrated);
 
         internal static Item BurntGarlicBread => GetModdedGDO<Item, BurntGarlicBread>();
-        internal static ItemGroup GarlicBread => GetModdedGDO<ItemGroup, UncookedGarlicBread>();
+        internal static ItemGroup UncookedGarlicBread => GetModdedGDO<ItemGroup, UncookedGarlicBread>();
         internal static ItemGroup PlatedGarlicBread => GetModdedGDO<ItemGroup, PlatedGarlicBread>();
         internal static Item CookedGarlicBread => GetModdedGDO<Item, CookedGarlicBread>();
         internal static Dish GarlicBreadDish => GetModdedGDO<Dish, GarlicBreadDish>();
@@ -64,6 +66,7 @@ namespace GarlicBread
             AddGameDataObject<BurntGarlicBread>();
             AddGameDataObject<CookedGarlicBread>();
             AddGameDataObject<GarlicBreadDish>();
+            AddGameDataObject<PlatedGarlicBread>();
         }
 
         protected override void OnUpdate() { }

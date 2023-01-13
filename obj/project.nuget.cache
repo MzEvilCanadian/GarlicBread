@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vfwyJZT3YhPB0N8KHPQNsHSIyFGwCGERH+LmqtN4gCR+eay7tXFSHKmWx0QkIkBv1MfSeRtq/5Q/+hLZ7LBFgQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Amber-PC2\\source\\repos\\GarlicBreadMod\\GarlicBreadMod\\GarlicBreadMod.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Amber-PC2\\.nuget\\packages\\yariazen.plateup.modbuildutilities\\1.5.6\\yariazen.plateup.modbuildutilities.1.5.6.nupkg.sha512"
+  ],
+  "logs": []
+}

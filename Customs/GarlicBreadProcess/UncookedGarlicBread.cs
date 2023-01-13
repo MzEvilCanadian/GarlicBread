@@ -25,11 +25,11 @@ namespace GarlicBread.Customs.GarlicBreadProcess
                 }
             }
         };
-        public override List<ItemGroup.ItemProcess> Processes => new List<Item.ItemProcess>
+        public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
         {
             new Item.ItemProcess
             {
-                Duration = 6,
+                Duration = 3,
                 Process = Mod.Cook,
                 Result = Mod.CookedGarlicBread
             }

@@ -1,0 +1,10 @@
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\bin\Debug\net472\GarlicBreadMod-Debug.dll.config
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\bin\Debug\net472\GarlicBreadMod-Debug.dll
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\bin\Debug\net472\GarlicBreadMod-Debug.pdb
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod.csproj.AssemblyReference.cache
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod.AssemblyInfoInputs.cache
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod.AssemblyInfo.cs
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod.csproj.CoreCompileInputs.cache
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod-Debug.dll
+C:\Users\Amber-PC2\source\repos\GarlicBreadMod\GarlicBreadMod\obj\Debug\net472\GarlicBreadMod-Debug.pdb
