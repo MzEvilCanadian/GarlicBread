@@ -19,9 +19,11 @@ namespace GarlicBreadMod
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "0.2.3";
+        internal const string MOD_VERSION = "0.2.4";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
         internal const string PLATEUP_VERSION = "1.1.2";
+
+        public static AssetBundle bundle;
 
         internal static Item Tomato => GetExistingGDO<Item>(ItemReference.Tomato);
         internal static Item Apple => GetExistingGDO<Item>(ItemReference.Apple);
@@ -65,6 +67,15 @@ namespace GarlicBreadMod
         protected override void Initialise()
         {
             base.Initialise();
+
+
+
+        } 
+
+        public override void PostActivate(KitchenMods.Mod mod)
+        {
+            base.PostActivate(mod);
+            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
 
             AddGameDataObject<BurntGarlicBread>();
             AddGameDataObject<CookedGarlicBread>();

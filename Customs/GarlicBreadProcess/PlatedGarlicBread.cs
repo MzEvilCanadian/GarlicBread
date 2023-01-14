@@ -1,5 +1,6 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
+using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
     internal class PlatedGarlicBread : CustomItemGroup
     {
         public override string UniqueNameID => "Plated Garlic Bread";
-        public override GameObject Prefab => Mod.Apple.Prefab;          // Filler line until graphics are made
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BananaWorldObject");          // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
@@ -33,12 +34,18 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
                 Result = Mod.BurntGarlicBread
             }
         };
-        /* Below is to add in the custom graphic for the item
+         //Below is to add in the custom graphic for the item
         public override void OnRegister(GameDataObject gameDataObject) 
         {
-             Material[] materials = { MaterialUtils.GetExistingMaterial("Bread - Inside") };
-             MaterialUtils.ApplyMaterial(Prefab, "pasta.blend", materials);
+            var materials = new Material[]
+            {
+                      MaterialUtils.GetExistingMaterial("Paper - Postit Yellow"),
+                      MaterialUtils.GetExistingMaterial("Wood"),
+            };
+             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
+
+            // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }
-        */
+
     }
 }

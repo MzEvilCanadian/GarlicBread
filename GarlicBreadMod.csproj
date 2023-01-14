@@ -20,6 +20,10 @@
     <ItemGroup>
         <PackageReference Include="Yariazen.PlateUp.ModBuildUtilities" Version="1.5.6" />
     </ItemGroup>
+  
+    <ItemGroup>
+      <Folder Include="Assests\" />
+    </ItemGroup>
 
     <Target Name="BundleWorkshop" AfterTargets="Build" Condition="$(EnableModDeployLocal) == 'true'">
         <Copy SourceFiles="$(TargetDir)$(MSBuildProjectName)-$(Configuration).dll" DestinationFolder="$(WorkshopDir)" />
