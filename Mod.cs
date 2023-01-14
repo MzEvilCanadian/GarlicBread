@@ -42,7 +42,7 @@ namespace GarlicBread
         internal static Item CookedGarlicBread => GetModdedGDO<Item, CookedGarlicBread>();
         internal static Dish GarlicBreadDish => GetModdedGDO<Dish, GarlicBreadDish>();
 
-        internal static AssetBundle bundle;
+     //   internal static AssetBundle bundle;
         internal static bool debug = true;
 
        /* protected override void OnPostActivate(KitchenMods.Mod mod)
