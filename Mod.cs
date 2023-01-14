@@ -19,14 +19,15 @@ namespace GarlicBreadMod
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "0.2.1";
-        internal const string MOD_AUTHOR = "Amber Booth";
+        internal const string MOD_VERSION = "0.2.3";
+        internal const string MOD_AUTHOR = "MzEvilCanadian";
         internal const string PLATEUP_VERSION = "1.1.2";
 
         internal static Item Tomato => GetExistingGDO<Item>(ItemReference.Tomato);
         internal static Item Apple => GetExistingGDO<Item>(ItemReference.Apple);
         internal static Item Pumpkin => GetExistingGDO<Item>(ItemReference.Pumpkin);
-        internal static Item Plate => GetExistingGDO<Item>(ItemReference.Plate);
+        internal static Item Oil => GetExistingGDO<Item>(ItemReference.Oil);
+        internal static Item OilIngredient => GetExistingGDO<Item>(ItemReference.OilIngredient);
         internal static Item Flour => GetExistingGDO<Item>(ItemReference.Flour);
         internal static Item Cheese => GetExistingGDO<Item>(ItemReference.Cheese);
         internal static Item BurntBread => GetExistingGDO<Item>(ItemReferences.BurnedBread);

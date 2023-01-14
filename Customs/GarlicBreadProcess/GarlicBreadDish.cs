@@ -27,13 +27,14 @@ namespace GarlicBreadMod.Dishes
             new Dish.IngredientUnlock
             {
                 Ingredient = Mod.UncookedGarlicBread,
-                MenuItem = Mod.PlatedGarlicBread   // Hard cast casts and Exception
+                MenuItem = Mod.PlatedGarlicBread   
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
             Mod.Flour,
-            Mod.Cheese
+            Mod.Cheese,
+            Mod.Oil
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
@@ -43,7 +44,7 @@ namespace GarlicBreadMod.Dishes
         };
         public override IDictionary<Locale, string> LocalisedRecipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Add grated cheese to a bread slice and cook" }
+            { Locale.English, "Add grated cheese to a bread slice then cook. Add oil and serve. Serves 2 customers" }
         };
 
         public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>

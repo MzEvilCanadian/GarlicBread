@@ -20,7 +20,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
                 Items = new List<Item>
                 {
                     Mod.CookedGarlicBread,
-                    Mod.Plate
+                    Mod.OilIngredient
                 }
             }
         };
