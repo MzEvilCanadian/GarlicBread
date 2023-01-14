@@ -1,4 +1,6 @@
-﻿using GarlicBread.Customs.GarlicBreadProcess;
+﻿using GarlicBreadMod.Customs.GarlicBreadProcess;
+using GarlicBreadMod.Registry;
+using GarlicBreadMod.Dishes;
 using KitchenData;
 using KitchenLib;
 using KitchenLib.References;
@@ -11,13 +13,13 @@ using KitchenMods;
 using ItemReference = KitchenLib.References.ItemReferences;
 using System.Linq;
 
-namespace GarlicBread
+namespace GarlicBreadMod
 {
     public class Mod : BaseMod
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "0.1.5";
+        internal const string MOD_VERSION = "0.2.1";
         internal const string MOD_AUTHOR = "Amber Booth";
         internal const string PLATEUP_VERSION = "1.1.2";
 
@@ -42,13 +44,14 @@ namespace GarlicBread
         internal static Item CookedGarlicBread => GetModdedGDO<Item, CookedGarlicBread>();
         internal static Dish GarlicBreadDish => GetModdedGDO<Dish, GarlicBreadDish>();
 
-     //   internal static AssetBundle bundle;
         internal static bool debug = true;
+        public static void LogInfo(string _log) { Debug.Log($"[{MOD_NAME}] " + _log); }
+        public static void LogInfo(object _log) { LogInfo(_log.ToString()); }
 
-       /* protected override void OnPostActivate(KitchenMods.Mod mod)
-        {
-            bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
-        } */
+        /* protected override void OnPostActivate(KitchenMods.Mod mod)
+         {
+             bundle = mod.GetPacks<AssetBundleModPack>().SelectMany(e => e.AssetBundles).ToList()[0];
+         } */
 
         public Mod() : base(MOD_ID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, $"{PLATEUP_VERSION}", Assembly.GetExecutingAssembly())
         {
@@ -62,11 +65,11 @@ namespace GarlicBread
         {
             base.Initialise();
 
-            AddGameDataObject<UncookedGarlicBread>();
             AddGameDataObject<BurntGarlicBread>();
             AddGameDataObject<CookedGarlicBread>();
-            AddGameDataObject<GarlicBreadDish>();
+            AddGameDataObject<UncookedGarlicBread>();
             AddGameDataObject<PlatedGarlicBread>();
+            AddGameDataObject<GarlicBreadDish>();
         }
 
         protected override void OnUpdate() { }
@@ -80,5 +83,7 @@ namespace GarlicBread
         {
             return (T)GDOUtils.GetExistingGDO(id);
         }
+
+
     }
 }

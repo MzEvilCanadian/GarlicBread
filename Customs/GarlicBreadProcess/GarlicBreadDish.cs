@@ -1,19 +1,20 @@
 ﻿using KitchenData;
-using KitchenLib.Customs;
+using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace GarlicBread.Customs.GarlicBreadProcess
+namespace GarlicBreadMod.Dishes
 {
-    public class GarlicBreadDish : CustomDish
+    public class GarlicBreadDish : ModDish
     {
-        public override string UniqueNameID => "Garlic Bread -- Base";
-        public override DishType Type => DishType.Main;
+        public override string UniqueNameID => "Garlic Bread";
+        public override DishType Type => DishType.Starter;
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
         public override CardType CardType => CardType.Default;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
+
         public override List<Dish.MenuItem> ResultingMenuItems => new List<Dish.MenuItem>
         {
             new Dish.MenuItem
@@ -39,6 +40,15 @@ namespace GarlicBread.Customs.GarlicBreadProcess
             Mod.Cook,
             Mod.Chop,
             Mod.Knead
+        };
+        public override IDictionary<Locale, string> LocalisedRecipe => new Dictionary<Locale, string>
+        {
+            { Locale.English, "Add grated cheese to a bread slice and cook" }
+        };
+
+        public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>
+        {
+            { Locale.English, LocalisationUtils.CreateUnlockInfo("Garlic Bread", "Adds Garlic Bread as a Starter", "Mmmmm Tasty") }
         };
     }
 }

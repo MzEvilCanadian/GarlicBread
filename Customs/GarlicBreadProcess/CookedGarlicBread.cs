@@ -3,7 +3,7 @@ using KitchenLib.Customs;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GarlicBread.Customs.GarlicBreadProcess
+namespace GarlicBreadMod.Customs.GarlicBreadProcess
 {
     internal class CookedGarlicBread : CustomItem
     {
