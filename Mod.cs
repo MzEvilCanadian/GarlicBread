@@ -5,13 +5,13 @@ using KitchenData;
 using KitchenLib;
 using KitchenLib.References;
 using KitchenLib.Utils;
+using KitchenMods;
+using KitchenLib.Event;
 using System.IO;
-using System;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
-using KitchenMods;
 using ItemReference = KitchenLib.References.ItemReferences;
-using System.Linq;
 
 namespace GarlicBreadMod
 {
@@ -66,6 +66,11 @@ namespace GarlicBreadMod
             AddGameDataObject<UncookedGarlicBread>();
             AddGameDataObject<PlatedGarlicBread>();
             AddGameDataObject<GarlicBreadDish>();
+
+            Events.BuildGameDataEvent += delegate (object s, BuildGameDataEventArgs args)
+            {
+                ModRegistry.HandleBuildGameDataEvent(args);
+            };
         }
         protected override void OnUpdate() { }
         private static T1 GetModdedGDO<T1, T2>() where T1 : GameDataObject
