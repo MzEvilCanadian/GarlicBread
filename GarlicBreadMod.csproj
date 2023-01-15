@@ -24,4 +24,5 @@
     <Target Name="BundleWorkshop" AfterTargets="Build" Condition="$(EnableModDeployLocal) == 'true'">
         <Copy SourceFiles="$(TargetDir)$(MSBuildProjectName)-$(Configuration).dll" DestinationFolder="$(WorkshopDir)" />
     </Target>
+	
 </Project>
