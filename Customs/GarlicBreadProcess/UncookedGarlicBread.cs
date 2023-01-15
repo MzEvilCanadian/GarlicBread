@@ -11,7 +11,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         public override string UniqueNameID => "Uncooked Garlic Bread";
         public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("UncookedGarlicBread");          // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
-        public override ItemStorage ItemStorageFlags => ItemStorage.None;
+        public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
 
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>()
         {

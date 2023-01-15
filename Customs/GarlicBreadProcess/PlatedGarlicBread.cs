@@ -44,15 +44,12 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
                 MaterialUtils.GetExistingMaterial("Bread - Inside Cooked"),
             };
             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
-
             materials[0] = MaterialUtils.GetExistingMaterial("Bread - Cooked");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObjec (1)", materials);
-
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Cheese - Pizza");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObjec (2)", materials);
-
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Wood - Corkboard");
-            MaterialUtils.ApplyMaterial(Prefab, "GameObjec (3)", materials);
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }

@@ -11,6 +11,6 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         public override string UniqueNameID => "BurntGarlicBread";
         public override GameObject Prefab => Mod.BurntBread.Prefab;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
-        public override ItemStorage ItemStorageFlags => ItemStorage.None;
+        public override ItemStorage ItemStorageFlags => ItemStorage.OutsideRubbish;
     }
 }
