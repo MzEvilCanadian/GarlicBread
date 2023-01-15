@@ -6,6 +6,7 @@ using System;
 
 namespace GarlicBreadMod.Dishes
 {
+
     public class GarlicBreadDish : ModDish
     {
         public override string UniqueNameID => "Garlic Bread";

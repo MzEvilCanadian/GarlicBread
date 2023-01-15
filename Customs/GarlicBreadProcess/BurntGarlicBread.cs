@@ -12,5 +12,6 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         public override GameObject Prefab => Mod.BurntBread.Prefab;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.OutsideRubbish;
+
     }
 }

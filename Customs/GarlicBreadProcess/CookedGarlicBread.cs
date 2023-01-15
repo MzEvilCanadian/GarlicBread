@@ -29,6 +29,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
+
         }
     }
 }
