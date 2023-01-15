@@ -1,5 +1,6 @@
 ﻿using KitchenData;
 using KitchenLib.Customs;
+using KitchenLib.Utils;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
     internal class UncookedGarlicBread : CustomItemGroup
     {
         public override string UniqueNameID => "Uncooked Garlic Bread";
-        public override GameObject Prefab => Mod.Tomato.Prefab;          // Filler line until graphics are made
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("UncookedGarlicBread");          // Filler line until graphics are made
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
 
@@ -35,14 +36,19 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             }
         };
 
-        /* Below is to add in the custom graphic for the item
-
-        public override void OnRegister(GameDataObject gdo) 
+        public override void OnRegister(GameDataObject gameDataObject)
         {
-            gdo.name = "Dish - Garlic Bread";
+            var materials = new Material[]
+            {
+                MaterialUtils.GetExistingMaterial("Bread - Inside"),
+             };
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Bread");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Cheese - Default");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
 
-                 MaterialUtils.ApplyMaterial<MeshRenderer>(Prefab, "Spaghetti/Spaghetti.001", new Material[] {
-                 MaterialUtils.GetExistingMaterial("Bread - Bun")});
-        } */
+            // MaterialUtils.ApplyMaterial([object], [name], [material list]
+        }
     }
 }

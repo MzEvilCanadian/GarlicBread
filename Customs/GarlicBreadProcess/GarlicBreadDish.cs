@@ -14,6 +14,7 @@ namespace GarlicBreadMod.Dishes
         public override CardType CardType => CardType.Default;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
+        public override float SelectionBias => 1;
 
         public override List<Dish.MenuItem> ResultingMenuItems => new List<Dish.MenuItem>
         {
@@ -34,7 +35,7 @@ namespace GarlicBreadMod.Dishes
         {
             Mod.Flour,
             Mod.Cheese,
-            Mod.Oil
+            Mod.ServingBoard
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
