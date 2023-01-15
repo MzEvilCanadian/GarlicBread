@@ -40,7 +40,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Yellow");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Wood - Dark");
+            materials[0] = MaterialUtils.GetExistingMaterial("Wood 1 - Dim");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Dark Green");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);

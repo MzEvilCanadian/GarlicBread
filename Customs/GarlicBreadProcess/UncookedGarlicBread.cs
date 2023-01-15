@@ -45,7 +45,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Bread");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Cheese - Default");
+            materials[0] = MaterialUtils.GetExistingMaterial("Paper - Postit Yellow");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
