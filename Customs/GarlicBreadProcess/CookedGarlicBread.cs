@@ -14,15 +14,6 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;
         public override int MaxOrderSharers => 2;
-        public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
-        {
-            new Item.ItemProcess
-            {
-                Duration = 12,
-                Process = Mod.Cook,
-                Result = Mod.BurntGarlicBread
-            }
-        };
         public override void OnRegister(GameDataObject gameDataObject)
         {
             var materials = new Material[]
@@ -32,8 +23,10 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Bread - Cooked");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Cheese - Pizza");
+            materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Yellow");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Dark Green");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }

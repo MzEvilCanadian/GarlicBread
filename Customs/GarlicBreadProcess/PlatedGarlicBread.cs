@@ -28,15 +28,6 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
                 }
             }
         };
-        public override List<ItemGroup.ItemProcess> Processes => new List<Item.ItemProcess>
-        {
-            new Item.ItemProcess
-            {
-                Duration = 6,
-                Process = Mod.Cook,
-                Result = Mod.BurntGarlicBread
-            }
-        };
         //Below is to add in the custom graphic for the item 
         public override void OnRegister(GameDataObject gameDataObject)
         {
@@ -47,10 +38,12 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Bread - Cooked");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Cheese - Pizza");
+            materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Yellow");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Wood - Corkboard");
+            materials[0] = MaterialUtils.GetExistingMaterial("Wood - Dark");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
+            materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Dark Green");
+            MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);
 
             // MaterialUtils.ApplyMaterial([object], [name], [material list]
         }
