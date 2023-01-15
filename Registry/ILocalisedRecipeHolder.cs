@@ -6,5 +6,6 @@ namespace GarlicBreadMod.Registry
     public interface ILocalisedRecipeHolder
     {
         IDictionary<Locale, string> LocalisedRecipe { get; }
+
     }
 }

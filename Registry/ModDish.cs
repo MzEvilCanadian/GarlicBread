@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace GarlicBreadMod.Dishes
 {
+
     public abstract class ModDish : CustomDish, ILocalisedRecipeHolder
     {
         public virtual IDictionary<Locale, string> LocalisedRecipe { get; }
