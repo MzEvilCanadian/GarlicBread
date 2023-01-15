@@ -14,6 +14,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
         public override Item DirtiesTo => Mod.ServingBoard;
         public override Item DisposesTo => Mod.ServingBoard;
+        public override int MaxOrderSharers => 2;
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
         {
             new ItemGroup.ItemSet
@@ -31,7 +32,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         {
             new Item.ItemProcess
             {
-                Duration = 12,
+                Duration = 6,
                 Process = Mod.Cook,
                 Result = Mod.BurntGarlicBread
             }

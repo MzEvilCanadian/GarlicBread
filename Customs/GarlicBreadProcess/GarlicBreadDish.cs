@@ -14,8 +14,6 @@ namespace GarlicBreadMod.Dishes
         public override CardType CardType => CardType.Default;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
-        public override float SelectionBias => 1;
-
         public override List<Dish.MenuItem> ResultingMenuItems => new List<Dish.MenuItem>
         {
             new Dish.MenuItem
@@ -45,9 +43,8 @@ namespace GarlicBreadMod.Dishes
         };
         public override IDictionary<Locale, string> LocalisedRecipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Add grated cheese to a bread slice then cook. Add oil and serve. Serves 2 customers" }
+            { Locale.English, "Add grated cheese to a bread slice then cook. Place on a Serving Board. Serves 2 customers" }
         };
-
         public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>
         {
             { Locale.English, LocalisationUtils.CreateUnlockInfo("Garlic Bread", "Adds Garlic Bread as a Starter", "Mmmmm Tasty") }
