@@ -19,7 +19,7 @@ namespace GarlicBreadMod
     {
         internal const string MOD_ID = "GarlicBread";
         internal const string MOD_NAME = "Garlic Bread";
-        internal const string MOD_VERSION = "1.0.0";
+        internal const string MOD_VERSION = "1.0.1";
         internal const string MOD_AUTHOR = "MzEvilCanadian";
         internal const string PLATEUP_VERSION = "1.1.2";
 
