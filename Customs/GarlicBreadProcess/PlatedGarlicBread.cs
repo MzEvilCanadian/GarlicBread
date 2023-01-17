@@ -9,7 +9,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
     internal class PlatedGarlicBread : CustomItemGroup
     {
         public override string UniqueNameID => "Plated Garlic Bread";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("PlatedGarlicBread");          // Filler line until graphics are made
+        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("PlatedGarlicBread");         
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
         public override Item DirtiesTo => Mod.ServingBoard;
