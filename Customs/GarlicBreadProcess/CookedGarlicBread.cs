@@ -13,7 +13,18 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;
-        public override int MaxOrderSharers => 2;
+
+        public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
+        {
+            new Item.ItemProcess
+            {
+                Duration = 3,
+                Process = Mod.Cook,
+                Result = Mod.BurntGarlicBread,
+                IsBad = true
+            }
+        };
+
         public override void OnRegister(GameDataObject gameDataObject)
         {
             var materials = new Material[]
