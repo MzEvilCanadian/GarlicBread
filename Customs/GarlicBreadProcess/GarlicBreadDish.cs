@@ -37,7 +37,7 @@ namespace GarlicBreadMod.Dishes
             Mod.Chop,
             Mod.Knead
         };
-        public override IDictionary<Locale, string> LocalisedRecipe => new Dictionary<Locale, string>
+        public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
         {
             { Locale.English, "Add grated cheese to a bread slice then cook. Place on a Serving Board. Serves 3 customers" }
         };
