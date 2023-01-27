@@ -13,22 +13,16 @@ namespace GarlicBreadMod.Dishes
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
         public override CardType CardType => CardType.Default;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Small;
-        public override UnlockGroup UnlockGroup => UnlockGroup.Dish; 
+        public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
+        public override float SelectionBias => 1;
 
         public override List<Dish.MenuItem> ResultingMenuItems => new List<Dish.MenuItem>
         {
             new Dish.MenuItem
             {
                 Item = Mod.PlatedGarlicBread,
-                Phase = MenuPhase.Starter
-            }
-        };
-        public override HashSet<Dish.IngredientUnlock> IngredientsUnlocks => new HashSet<Dish.IngredientUnlock>
-        {
-            new Dish.IngredientUnlock
-            {
-                Ingredient = Mod.UncookedGarlicBread,
-                MenuItem = Mod.PlatedGarlicBread   
+                Phase = MenuPhase.Starter,
+                Weight = 1
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
