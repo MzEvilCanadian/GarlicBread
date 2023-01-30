@@ -20,26 +20,27 @@ namespace GarlicBreadMod.Dishes
         {
             new Dish.MenuItem
             {
-                Item = Mod.PlatedGarlicBread,
+                Item = Main.PlatedGarlicBread,
                 Phase = MenuPhase.Starter,
                 Weight = 1
             }
         };
         public override HashSet<Item> MinimumIngredients => new HashSet<Item>
         {
-            Mod.Flour,
-            Mod.Cheese,
-            Mod.ServingBoard
+            Main.Flour,
+            Main.Cheese,
+            Main.ServingBoard,
+            Main.Garlic
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
-            Mod.Cook,
-            Mod.Chop,
-            Mod.Knead
+            Main.Cook,
+            Main.Chop,
+            Main.Knead
         };
         public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Add grated cheese to a bread slice then cook. Place on a Serving Board. Serves 3 customers" }
+            { Locale.English, "Add grated cheese and minced garlic to a bread slice then cook. Place on a Serving Board. Serves 3 customers" }
         };
         public override IDictionary<Locale, UnlockInfo> LocalisedInfo => new Dictionary<Locale, UnlockInfo>
         {

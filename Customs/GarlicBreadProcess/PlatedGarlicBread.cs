@@ -9,11 +9,11 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
     internal class PlatedGarlicBread : CustomItemGroup
     {
         public override string UniqueNameID => "Plated Garlic Bread";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("PlatedGarlicBread");         
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("PlatedGarlicBread");         
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
-        public override Item DirtiesTo => Mod.ServingBoard;
-        public override Item DisposesTo => Mod.ServingBoard;
+        public override Item DirtiesTo => Main.ServingBoard;
+        public override Item DisposesTo => Main.ServingBoard;
         public override int MaxOrderSharers => 2;
         public override List<ItemGroup.ItemSet> Sets => new List<ItemGroup.ItemSet>
         {
@@ -23,8 +23,8 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
                 Min = 2,
                 Items = new List<Item>
                 {
-                    Mod.CookedGarlicBread,
-                    Mod.ServingBoard
+                    Main.CookedGarlicBread,
+                    Main.ServingBoard
                 }
             }
         };
@@ -40,7 +40,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (1)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Yellow");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (2)", materials);
-            materials[0] = MaterialUtils.GetExistingMaterial("Wood 1 - Dim");
+            materials[0] = MaterialUtils.GetExistingMaterial("Wood - Barrel");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (3)", materials);
             materials[0] = MaterialUtils.GetExistingMaterial("Plastic - Dark Green");
             MaterialUtils.ApplyMaterial(Prefab, "GameObject (4)", materials);

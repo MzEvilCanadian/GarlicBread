@@ -9,7 +9,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
     internal class CookedGarlicBread : CustomItem
     {
         public override string UniqueNameID => "CookedGarlicBread";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("cookedGarlicBread");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("cookedGarlicBread");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemValue ItemValue => ItemValue.Small;
@@ -18,9 +18,9 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
         {
             new Item.ItemProcess
             {
-                Duration = 3,
-                Process = Mod.Cook,
-                Result = Mod.BurntGarlicBread,
+                Duration = 5,
+                Process = Main.Cook,
+                Result = Main.BurntGarlicBread,
                 IsBad = true
             }
         };

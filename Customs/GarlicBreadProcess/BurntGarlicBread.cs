@@ -9,7 +9,7 @@ namespace GarlicBreadMod.Customs.GarlicBreadProcess
     internal class BurntGarlicBread : CustomItem
     {
         public override string UniqueNameID => "BurntGarlicBread";
-        public override GameObject Prefab => Mod.bundle.LoadAsset<GameObject>("BurntGarlicBread");
+        public override GameObject Prefab => Main.bundle.LoadAsset<GameObject>("BurntGarlicBread");
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.OutsideRubbish;
 
